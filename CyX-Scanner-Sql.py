@@ -6,7 +6,9 @@ from time import sleep
 from bs4 import BeautifulSoup
 import sys
 import webbrowser
+import os
 from urllib.parse import urljoin
+os.system('clear')
 #color 
 red = '\033[31m'
 green = '\033[32m'
@@ -63,7 +65,7 @@ def vulnerable(response):
     return False
 def CyX_Scanner_Sql(url):
     forms = get_forms(url)
-    print(f"[+] Detected {len(forms)} forms on {url}.")
+    print(f"{green}[+] Detected {len(forms)} forms on {url}.")
     for form in forms:
         details = form_details(form)
         
@@ -90,11 +92,12 @@ if __name__ == "__main__":
     url_Target = input(f'{red}Enter Website To Scan : ')
     CyX_Scanner_Sql(url_Target)
 
-
 Cyx = input('Do you want to follow our channel on Telegram ? (y/n)')
 if Cyx == 'y':
-    webbrowser.open("https://t.me/Hacking_course1")
+    webbrowser.open("https://t.me/CyX_Security")
 elif Cyx == 'n':
     print('(#_#)')
+    exit()
     
+
 
