@@ -14,20 +14,9 @@ red = '\033[31m'
 green = '\033[32m'
 
 CyX = (f'''{red}
-
-   _____     __   __   _____                                             _ 
-  / ____|    \ \ / /  / ____|                                           | |
- | |    _   _ \ V /  | (___   ___ __ _ _ __  _ __   ___ _ __   ___  __ _| |
- | |   | | | | > <    \___ \ / __/ _` | '_ \| '_ \ / _ \ '__| / __|/ _` | |
- | |___| |_| |/ . \   ____) | (_| (_| | | | | | | |  __/ |    \__ \ (_| | |
-  \_____\__, /_/ \_\ |_____/ \___\__,_|_| |_|_| |_|\___|_|    |___/\__, |_|
-         __/ |                                                        | |  
-        |___/                                                         |_|  
-
-
-
-
-{green}@CyberX10
+     
+     SQL SCANNER SCRIPT 
+        BY CYBER MAX
 
 ''')
 print(CyX)
@@ -63,7 +52,7 @@ def vulnerable(response):
         if error in response.content.decode().lower():
             return True
     return False
-def CyX_Scanner_Sql(url):
+def Scanner_Sql(url):
     forms = get_forms(url)
     print(f"{green}[+] Detected {len(forms)} forms on {url}.")
     for form in forms:
@@ -90,11 +79,11 @@ def CyX_Scanner_Sql(url):
                 break
 if __name__ == "__main__":
     url_Target = input(f'{red}Enter Website To Scan : ')
-    CyX_Scanner_Sql(url_Target)
+    Scanner_Sql(url_Target)
 
 Cyx = input('Do you want to follow our channel on Telegram ? (y/n)')
 if Cyx == 'y':
-    webbrowser.open("https://t.me/CyX_Security")
+    webbrowser.open("https://t.me/CyberSpyWare")
 elif Cyx == 'n':
     print('(#_#)')
     exit()
